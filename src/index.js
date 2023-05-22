@@ -8,7 +8,7 @@ const db = require('./db')
 db()
 
 const app = express()
-app.use(cors())
+app.use(cors({ 'access-control-allow-origin': '*' }))
 
 //Obtener datos del cliente (BODY & QUERY)
 app.use(express.urlencoded({extended: true}));
